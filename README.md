@@ -1,1 +1,1 @@
-# course
+# React Zero course
