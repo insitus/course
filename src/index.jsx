@@ -1,10 +1,11 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-import Toggle from './components/Toggle';
+import Main from '../src/connectors/Main';
 
 const App = () => {
-  return <Toggle/>;
+  return <Main/>;
+  
 }
 
 ReactDOM.render(
