@@ -1,0 +1,41 @@
+<div id="root">
+  <div class="container">
+    Team Zero - just HTML
+  </div>
+</div>
+
+<div id="root2"></div>
+
+<div id="root3"></div>
+
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel">
+
+  // vanilla javascript
+  const root = document.getElementById('root');
+  const objDiv = document.createElement('div');
+  objDiv.className = 'container';
+  objDiv.textContent = 'Team Zero - Created using vanilla Javascript';
+  root.appendChild(objDiv);
+
+  // React API
+  document.getElementById('root2')
+  const objDiv2 = React.createElement(
+    'div',
+    {className: 'container'},
+    'Team Zero - Created using React API'
+  );
+  ReactDOM.render(objDiv2, root2);
+
+  // React JSX
+  const element = <div className="container">Team Zero - Created using React JSX</div>;
+
+  // or
+  const childrenText = 'Team Zero - Created using React JSX';
+  const element = <div className="container" children={childrenText}/>;
+
+  ReactDOM.render(element, document.getElementById('root3'));
+
+</script>
