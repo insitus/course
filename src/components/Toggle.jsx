@@ -2,9 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const Check = styled.input``;
-
 const ToggleSpan = styled.span``;
-
 const Container = styled.label``;
 
 const Toggle = (props) => {
