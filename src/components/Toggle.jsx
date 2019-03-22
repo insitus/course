@@ -8,7 +8,7 @@ const Container = styled.label``;
 const Toggle = (props) => {
   return (
     <Container className="toggle-wrapper">
-      <Check type="checkbox" />
+      <Check type="checkbox" checked={props.checked}/>
       <ToggleSpan className="toggle"/>
     </Container>
   );
