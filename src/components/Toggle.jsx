@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const Check = styled.input``;
 const ToggleSpan = styled.span``;
-const Container = styled.label``;
+const Container = styled.label`
+  background-color: red;
+`;
 
 const Toggle = (props) => {
   return (

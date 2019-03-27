@@ -28,9 +28,9 @@ class Main extends React.Component {
 
     this.state = {
       items: [
-        { id: 1, active: true },
-        { id: 2, active: true },
-        { id: 3, active: false },
+        { id: 1, active: true, label: 'Damian' },   // list the toggles with the labels on the left
+        { id: 2, active: true, label: 'Frans' },
+        { id: 3, active: false, label: 'Pizza' },
       ]
     }
 
@@ -38,22 +38,26 @@ class Main extends React.Component {
   }
 
   onToggleClick (clickedItem) {
-    // let foundItem = this.state.items.find( item => item.id === clickedItem.id );
-    // foundItem.active = !foundItem.active;
 
-    const findAndModifyClickedItem = (...) => {
-      if (...) {
-        return ...
-      }
-
-      return ...
-    };
+    // const findAndModifyClickedItem = (item) => {
+    //   if (item.id === clickedItem.id) {
+    //     return {...item, active: !item.active};
+    //   }
+    //   return item
+    // };
 
     const newState = {
-      items: this.state.items.map(findAndModifyClickedItem)
+      items: this.state.items.map(item => item.id === clickedItem.id
+        ? { 
+            ...item, // id: 1, active: true, 
+            active: !item.active 
+          } 
+        : item
+      )
     };
+    
 
-    this.setState( newState );
+    this.setState( newState, () => console.log(this.state) );
   }
 
   renderToggle (item, index) {
