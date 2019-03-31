@@ -69,30 +69,30 @@ html {
   max-width: 100%;
 }
 
-label.toggle-wrapper {
+/* label.toggle-wrapper {
   position: relative;
   display: inline-block;
   width: 35px;
   height: 22px;
-}
+} */
 
-label.toggle-wrapper > input {
+/* label.toggle-wrapper > input {
   display: none;
-}
+} */
 
-label.toggle-wrapper > input:checked + span {
+/* label.toggle-wrapper > input:checked + span {
   background-color: #00aaff;
-}
+} */
 
-label.toggle-wrapper > input:checked + span:before {
+/* label.toggle-wrapper > input:checked + span:before {
   transform: translateX(13px);
-}
+} */
 
-label.toggle-wrapper > input:focus + span {
+/* label.toggle-wrapper > input:focus + span {
   box-shadow: 0 0 1px #2196f3;
-}
+} */
 
-span.toggle {
+/* span.toggle {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -102,9 +102,9 @@ span.toggle {
   background-color: #ccc;
   transition: 0.2s;
   border-radius: 34px;
-}
+} */
 
-span.toggle:before {
+/* span.toggle:before {
   position: absolute;
   content: '';
   height: 20px;
@@ -115,4 +115,4 @@ span.toggle:before {
   transition: 0.2s;
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 rgba(0, 34, 51, 0.25);
-}
+} */
