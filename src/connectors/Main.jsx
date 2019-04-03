@@ -37,32 +37,29 @@ class Main extends React.Component {
     this.renderToggle = this.renderToggle.bind(this);
   }
 
-  onToggle = (clickedItem) => {
+  onToggle(clickedItem) {
     this.setState({
-      items: [this.state.items.map()]
+      // items: [...this.state.items.map(changeItem)],
+      items: [...this.state.items.map(changeItem)],
     });
 
-  changeItem = (item) => {
-    for (var i = 0; i < array.length; i++) {
-    if (clickedItem) {
-       return checked = {false};
-    }
-    else {
-      retrun (this.items) 
-    }
-  }
-  
-  }//changeItem
-
-  }//onToggle
-
- 
+    function changeItem(item) {
+      if (item.id === clickedItem.id) {
+        return {...item, active: !item.active};
+        //item.active = !item.active;
+        //return item;
+      }
+      else {
+        return item;
+      }
+    } //changeItem
+  } //onToggle
 
   renderToggle (item, index) {
     return (<Toggle
       checked={item.active}
       key={index}
-      onToggle={ this.onToggle(item) }
+      onToggle={() => this.onToggle(item) }
     />);
   }
 
