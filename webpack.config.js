@@ -3,9 +3,25 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        loaders: ['babel-loader', 'ts-loader'],
+      },
+      // {
+      //   test: /\.jsx?$/,
+      //   exclude: /node_modules/,
+      //   loaders: ['babel-loader'],
+      // },
+
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          },
+        },
       }
     ]
   },
