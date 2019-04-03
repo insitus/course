@@ -70,13 +70,17 @@ const Listitem = styled.li`
 `;
 */
 
-const Toggle = (props) => {
+const Toggle = props => {
   return (
     <React.Fragment>
       <Paragraph>{props.labelValue}</Paragraph>
       <Container>
-        <Check type="checkbox" checked={props.checked} onChange={props.onToggle}/>
-        <ToggleSpan/>
+        <Check
+          type="checkbox"
+          checked={props.checked}
+          onChange={props.onToggle}
+        />
+        <ToggleSpan />
       </Container>
     </React.Fragment>
   );

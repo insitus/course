@@ -4,6 +4,7 @@
   "description": "React Zero",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --config ./.prettierrc --write 'src/**/*.jsx'",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,6 +34,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "prettier": "1.16.4",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"

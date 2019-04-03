@@ -5,15 +5,13 @@ const Imagecontainer = styled.div`
   text-align: center;
   width: 500px;
   max-width: 480px;
-  max-height:auto;
+  max-height: auto;
 `;
 
-const ImageBox = (props) => 
-  (
-    <Imagecontainer>
-      <img src={props.image} />
-    </Imagecontainer>
-  );
-
+const ImageBox = props => (
+  <Imagecontainer>
+    <img src={props.image} />
+  </Imagecontainer>
+);
 
 export default ImageBox;
