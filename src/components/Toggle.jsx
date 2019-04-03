@@ -50,33 +50,35 @@ const Container = styled.label`
   }
 `;
 
+/*
 const Listitems = styled.ul`
   width: 400px;
   display: flex; 
   justify-content: space-between;
 `;
+*/
 
 const Paragraph = styled.p`
   font-family: arial;
 `;
-
+/*
 const Listitem = styled.li`
   list-style-type: none;
   padding-right: 20px;
   float: left;
+  width: 400px;
 `;
+*/
 
 const Toggle = (props) => {
   return (
-    <Listitems>
-      <Listitem>
-        <Paragraph>{props.labelValue}</Paragraph>
-        <Container>
-          <Check type="checkbox" checked={props.checked} onChange={props.onToggle}/>
-          <ToggleSpan/>
-        </Container>
-      </Listitem>
-    </Listitems>
+    <React.Fragment>
+      <Paragraph>{props.labelValue}</Paragraph>
+      <Container>
+        <Check type="checkbox" checked={props.checked} onChange={props.onToggle}/>
+        <ToggleSpan/>
+      </Container>
+    </React.Fragment>
   );
 };
 
