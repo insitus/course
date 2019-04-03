@@ -50,25 +50,9 @@ const Container = styled.label`
   }
 `;
 
-/*
-const Listitems = styled.ul`
-  width: 400px;
-  display: flex; 
-  justify-content: space-between;
-`;
-*/
-
 const Paragraph = styled.p`
   font-family: arial;
 `;
-/*
-const Listitem = styled.li`
-  list-style-type: none;
-  padding-right: 20px;
-  float: left;
-  width: 400px;
-`;
-*/
 
 const Toggle = props => {
   return (
