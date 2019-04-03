@@ -20,12 +20,7 @@ class Main extends React.Component {
     this.renderToggle = this.renderToggle.bind(this);
   }
 
-  onToggle = (clickedItem) => {
-    this.setState({
-      items: [this.state.items.map()]
-    });
-
-<<<<<<< HEAD
+  onToggle(clickedItem) {
     const newState = {
       items: this.state.items.map(item => item.id === clickedItem.id
         ? { 
@@ -46,37 +41,13 @@ class Main extends React.Component {
           checked={item.active}
           key={index}
           labelValue={item.label}
-          onToggle={ () => this.onToggleClick(item) }
+          onToggle={ () => this.onToggle(item) }
         />
         {
           item.active ? (<ImageBox image={item.image}/>) : null
         }
       </React.Fragment>
     );
-=======
-  changeItem = (item) => {
-    for (var i = 0; i < array.length; i++) {
-    if (clickedItem) {
-       return checked = {false};
-    }
-    else {
-      retrun (this.items) 
-    }
-  }
-  
-  }//changeItem
-
-  }//onToggle
-
- 
-
-  renderToggle (item, index) {
-    return (<Toggle
-      checked={item.active}
-      key={index}
-      onToggle={ this.onToggle(item) }
-    />);
->>>>>>> 2ad8b6ceaf3ed97a7d094a76329a0264a9811b1a
   }
 
   render () {
