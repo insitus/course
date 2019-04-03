@@ -27,6 +27,7 @@ const ToggleSpan = styled.span`
   }
 `;
 const Container = styled.label`
+<<<<<<< HEAD
   position: relative;
   display: inline-block;
   width: 35px;
@@ -63,6 +64,9 @@ const Listitem = styled.li`
   list-style-type: none;
   padding-right: 20px;
   float: left;
+=======
+  background-color: transparent;
+>>>>>>> 2ad8b6ceaf3ed97a7d094a76329a0264a9811b1a
 `;
 
 const Toggle = (props) => {
