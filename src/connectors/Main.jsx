@@ -1,15 +1,16 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+import styled from 'styled-components';
 
 import Toggle from '../components/Toggle';
 import ImageBox from '../components/ImageBox';
-import styled from 'styled-components';
 
-const Listitems = styled.ul`
+
+const List = styled.ul`
   width: 400px;
 `;
 
-const Listitem = styled.li`
+const Item = styled.li`
   list-style-type: none;
   padding-right: 20px;
   float: left;
@@ -23,9 +24,9 @@ class Main extends React.Component {
 
     this.state = {
       items: [
-        { id: 1, active: true, label: 'Barcelona', image: '/media/bynder-barcelona.jpg' },   // list the toggles with the labels on the left
-        { id: 2, active: true, label: 'San Mateo', image: '/media/bynder-san-mateo.jpg' },
-        { id: 3, active: true, label: 'Boston', image: '/media/bynder-boston.jpg' },
+        { id: 1, active: false, label: 'Barcelona', image: '/media/bynder-barcelona.jpg' },   // list the toggles with the labels on the left
+        { id: 2, active: false, label: 'San Mateo', image: '/media/bynder-san-mateo.jpg' },
+        { id: 3, active: false, label: 'Boston', image: '/media/bynder-boston.jpg' },
       ]
     }
 
@@ -48,7 +49,7 @@ class Main extends React.Component {
 
   renderToggle (item, index) {
     return (
-      <Listitem>
+      <Item>
         <Toggle
           checked={item.active}
           key={index}
@@ -58,17 +59,15 @@ class Main extends React.Component {
         {
           item.active ? (<ImageBox image={item.image}/>) : null
         }
-      </Listitem>
+      </Item>
     );
   }
 
   render () {
     return (
-      <React.Fragment>
-        <Listitems>
-          {this.state.items.map(this.renderToggle)}  
-        </Listitems>
-      </React.Fragment>
+      <List>
+        {this.state.items.map(this.renderToggle)}  
+      </List>
     )
   }
 }
