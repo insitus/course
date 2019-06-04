@@ -68,15 +68,24 @@ class Main extends React.Component {
           checked={item.active}
           key={index}
           labelValue={item.label}
-          onToggle={() => this.onToggle(item)}
+          onToggle={ () => this.onToggle(item) }
         />
         {item.active ? <ImageBox image={item.image} /> : null}
       </Item>
     );
   }
 
+
+  function() {
+    this.onToggle(item);
+  }
+
   render() {
-    return <List>{this.state.items.map(this.renderToggle)}</List>;
+    return (
+      <List>
+        {this.state.items.map(this.renderToggle)}
+      </List>
+    );
   }
 }
 
